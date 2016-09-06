@@ -22,7 +22,7 @@ echo "Build number: ${TRAVIS_JOB_NUMBER}. Starting deployment."
 chmod 600 deploy_static.pem
 # clean out any existing staging folder but make sure it exists
 ssh -i deploy_static.pem formidable@192.241.218.94 "rm -rf static/playbook-staging && mkdir -p static/playbook-staging"
-# copy the radium build to the staging arena; if this fails, site is still OK
+# copy the playbook build to the staging arena; if this fails, site is still OK
 scp -i ./deploy_static.pem -rp ./build/* formidable@192.241.218.94:/home/formidable/static/playbook-staging
-# rename the staging arena to the actual radium site
+# rename the staging arena to the actual playbook site
 ssh -i ./deploy_static.pem formidable@192.241.218.94 "rm -rf static/playbook && mv static/playbook-staging/ static/playbook"
