@@ -2,9 +2,9 @@
 // The order should mirror the README TOC
 module.exports = [
   "/",
-  "/infrastructure/single",
-  "/frontend/webpack-code-splitting",
-  "/frontend/webpack-plugins",
-  "/frontend/webpack-shared-libs",
-  "/frontend/webpack-source-maps"
+  "/docs/infrastructure/single",
+  "/docs/frontend/webpack-code-splitting",
+  "/docs/frontend/webpack-plugins",
+  "/docs/frontend/webpack-shared-libs",
+  "/docs/frontend/webpack-source-maps"
 ];

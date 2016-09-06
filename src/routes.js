@@ -10,10 +10,10 @@ import NotFound from "./views/not-found";
 module.exports = (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
-    <Route path="/frontend" component={Docs} />
-    <Route path="/frontend/:slug" component={Docs} />
-    <Route path="/infrastructure" component={Docs} />
-    <Route path="/infrastructure/:slug" component={Docs} />
+    <Route path="/docs/frontend" component={Docs} />
+    <Route path="/docs/frontend/:slug" component={Docs} />
+    <Route path="/docs/infrastructure" component={Docs} />
+    <Route path="/docs/infrastructure/:slug" component={Docs} />
     <Route path="*" component={NotFound}/>
   </Route>
 );
