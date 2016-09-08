@@ -21,7 +21,10 @@ const Home = function () {
     <Page name="home">
       <Header />
       <main style={styles.main}>
-        <Documentation markdown={require("!!raw!../../node_modules/formidable-playbook/README.md")}/>
+        <Documentation
+          markdown={require("!!raw!../../node_modules/formidable-playbook/README.md")}
+          currentPath="/"
+        />
       </main>
     </Page>
   );
