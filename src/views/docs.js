@@ -78,7 +78,7 @@ class Docs extends React.Component {
         <DocsHeader />
         <main style={styles.main}>
           <Link to="/" style={styles.homeLink}>&larr; Return Home</Link>
-          <Documentation markdown={this.state.docs.file} />
+          <Documentation markdown={this.state.docs.file} currentPath={this.props.location.pathname} />
           <NextRead currentIndex={indexOf(config, this.state.docs)} />
         </main>
       </Page>

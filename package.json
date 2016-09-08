@@ -10,7 +10,8 @@
     "copy-assets": "cp -r static build/static && cp -r ./node_modules/formidable-playbook/examples build",
     "server-examples": "http-server examples -p 3000 .",
     "lint": "builder concurrent lint-react lint-config lint-test lint-examples",
-    "lint-examples": "eslint --ext .js,.jsx examples --ignore-pattern **/dist/"
+    "lint-examples": "eslint --ext .js,.jsx examples --ignore-pattern **/dist/",
+    "update-project": "npm update formidable-playbook"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,7 @@
     "builder-docs-archetype": "^3.0.1",
     "color": "^0.11.3",
     "formidable-landers": "^3.3.2",
-    "formidable-playbook": "^0.0.3",
+    "formidable-playbook": "FormidableLabs/formidable-playbook",
     "history": "^2.1.0",
     "lodash": "^4.14.0",
     "markdown-it": "^7.0.0",
