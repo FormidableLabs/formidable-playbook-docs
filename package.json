@@ -1,5 +1,5 @@
 {
-  "name": "formidable-playbook-lander",
+  "name": "formidable-playbook-docs",
   "version": "0.0.1",
   "description": "The Formidable Playbook",
   "main": "",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FormidableLabs/formidable-playbook-lander.git"
+    "url": "git+https://github.com/FormidableLabs/formidable-playbook-docs.git"
   },
   "keywords": [
     "best practices",
@@ -26,9 +26,9 @@
   "author": "Ryan Roemer <ryan.roemer@formidable.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FormidableLabs/formidable-playbook-lander/issues"
+    "url": "https://github.com/FormidableLabs/formidable-playbook-docs/issues"
   },
-  "homepage": "https://github.com/FormidableLabs/formidable-playbook-lander#readme",
+  "homepage": "https://github.com/FormidableLabs/formidable-playbook-docs#readme",
   "devDependencies": {
     "builder-docs-archetype-dev": "^3.0.1",
     "doctoc": "^1.2.0",
