@@ -36,7 +36,8 @@ export default {
   },
   "h1, h2, h3, h4, h5, h6, hgroup": {
     fontFamily: theme.sansSerif,
-    letterSpacing: ".02em"
+    letterSpacing: ".02em",
+    fontWeight: "normal"
   },
   a: {
     color: theme.red,
