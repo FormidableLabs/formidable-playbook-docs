@@ -18,8 +18,7 @@ export default {
     fontFamily: theme.serif,
     fontSize: "16px",
     lineHeight: 1.4,
-    margin: 0,
-    WebkitFontSmoothing: "antialiased"
+    margin: 0
   },
   "html, body": {
     overflowX: "hidden",
@@ -85,7 +84,7 @@ export default {
     fontSize: "1.5rem"
   },
   h4: {
-    fontSize: "1rem"
+    fontSize: "1.25rem"
   },
   h5: {
     fontSize: "1rem"

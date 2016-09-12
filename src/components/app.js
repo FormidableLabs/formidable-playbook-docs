@@ -6,6 +6,7 @@ import { Header, Footer } from "formidable-landers";
 import stylesheet from "../playbook-stylesheet";
 import theme from "../playbook-theme";
 
+
 class App extends React.Component {
   render() {
     const styleRootStyles = {
@@ -20,19 +21,38 @@ class App extends React.Component {
         style={styleRootStyles}
       >
         <Style rules={stylesheet} />
-        <Header
-          background={theme.white}
-          linkStyles={{
-            color: theme.charcoal,
-            fontFamily: theme.serif,
-            textDecoration: "none",
-            ":hover": {
-              color: theme.red
+        <Style
+          scopeSelector=".formidableHeader-container div"
+          rules={{
+            marginLeft: "auto",
+            mediaQueries: {
+              [`${theme.breakpoints.medium}`]: {
+                marginLeft: 0
+              }
             }
           }}
         />
+        <Header
+          theme="light"
+          containerStyle={{
+            width: "100%",
+            maxWidth: `calc(${theme.container} + ${theme.gutter})`,
+            margin: `${theme.gutter} auto`,
+            padding: `${theme.gutter} 0`
+          }}
+        >
+          <a href="https://github.com/FormidableLabs/formidable-playbook" style={{marginTop: "16px"}}>View Source on GitHub</a>
+        </Header>
         {this.props.children}
-        <Footer background={`${theme.white} url('./static/footer.jpg') no-repeat top center`} />
+        <Footer
+          padding={`5rem ${theme.gutter} 6rem`}
+          theme="dark"
+          containerStyle={{
+            width: "100%",
+            maxWidth: `calc(${theme.container} + ${theme.gutter})`,
+            margin: `${theme.gutter} auto`
+          }}
+        />
       </StyleRoot>
     );
   }
