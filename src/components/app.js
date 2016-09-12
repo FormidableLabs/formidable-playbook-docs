@@ -21,18 +21,22 @@ class App extends React.Component {
       >
         <Style rules={stylesheet} />
         <Header
-          background={theme.white}
-          linkStyles={{
-            color: theme.charcoal,
-            fontFamily: theme.serif,
-            textDecoration: "none",
-            ":hover": {
-              color: theme.red
-            }
+          padding={`1.5rem ${theme.gutter}`}
+          theme="light"
+          style={{
+            background: `#FFFFFF linear-gradient(to bottom, rgba(255,255,255,0) 85%, rgba(10,9,9,0.75) 100%)`
+          }}
+        >
+          <a href="https://github.com/FormidableLabs/formidable-playbook" style={{marginTop: "16px"}}>View Source on GitHub</a>
+        </Header>
+        {this.props.children}
+        <Footer
+          padding={`5rem ${theme.gutter} 6rem`}
+          theme="dark"
+          style={{
+            maxWidth: "500px"
           }}
         />
-        {this.props.children}
-        <Footer background={`${theme.white} url('./static/footer.jpg') no-repeat top center`} />
       </StyleRoot>
     );
   }

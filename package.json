@@ -40,7 +40,7 @@
     "builder": "^2.9.1",
     "builder-docs-archetype": "^3.0.1",
     "color": "^0.11.3",
-    "formidable-landers": "^3.3.2",
+    "formidable-landers": "^4.0.2",
     "formidable-playbook": "FormidableLabs/formidable-playbook",
     "history": "^2.1.0",
     "lodash": "^4.14.0",
