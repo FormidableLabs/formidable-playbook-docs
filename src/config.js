@@ -24,5 +24,10 @@ module.exports = [
     label: "Webpack Source Maps",
     route: "/docs/frontend/webpack-source-maps",
     file: require("!!raw!../node_modules/formidable-playbook/docs/frontend/webpack-source-maps.md")
+  },
+  {
+    label: "Webpack Tree Shaking",
+    route: "/docs/frontend/webpack-tree-shaking",
+    file: require("!!raw!../node_modules/formidable-playbook/docs/frontend/webpack-tree-shaking.md")
   }
 ];
