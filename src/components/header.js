@@ -8,30 +8,25 @@ class Header extends React.Component {
     return {
       main: {
         display: "flex",
+        flexDirection: "column",
+        flexWrap: "nowrap",
         justifyContent: "center",
         alignItems: "center",
-        height: "380px",
         backgroundColor: theme.red,
         backgroundImage: "url('./static/hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "bottom center",
         color: theme.white,
-        textAlign: "center",
-        [`@media ${theme.breakpoints.medium}`]: {
-          height: "500px"
-        }
-      },
-      headerGroup: {
-        padding: "1em"
+        textAlign: "center"
       },
       mainHeading: {
         margin: "0px",
         fontSize: "3em",
+        fontWeight: "normal",
         letterSpacing: ".02em",
-        WebkitFontSmoothing: "antialiased",
         textShadow: "2px 2px 8px rgba(168, 37, 27,.5)",
         [`@media ${theme.breakpoints.medium}`]: {
-          fontSize: "4rem"
+          fontSize: "3.5rem"
         }
       },
       subHeading: {
@@ -69,16 +64,13 @@ class Header extends React.Component {
   render() {
     const styles = this.getStyles();
     return (
-      <header style={styles.main}>
-        <hgroup style={styles.headerGroup}>
-          <h1 style={styles.mainHeading}>Formidable Playbook</h1>
-          <h2 style={styles.subHeading}>A practical guide to building modern applications</h2>
-          <a style={styles.githubLink} href="https://github.com/FormidableLabs/formidable-playbook" target="_blank">
-          <span style={styles.githubLinkLogo} dangerouslySetInnerHTML={{__html: GITHUB_LOGO}}/>
-          <span style={{textAlign: "left"}}>FormidableLabs/formidable-playbook</span>
-          </a>
-        </hgroup>
-      </header>
+      <div style={styles.main}>
+        <h2 style={styles.mainHeading}>A practical guide to building modern applications</h2>
+        <a style={styles.githubLink} href="https://github.com/FormidableLabs/formidable-playbook" target="_blank">
+        <span style={styles.githubLinkLogo} dangerouslySetInnerHTML={{__html: GITHUB_LOGO}}/>
+        <span style={{textAlign: "left"}}>FormidableLabs/formidable-playbook</span>
+        </a>
+      </div>
     );
   }
 }

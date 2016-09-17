@@ -27,7 +27,7 @@ export default {
   "article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary": {
     display: "block"
   },
-  "h1, h2, h3, h4, h5, h6, ul, ol, dd, p, figure, pre, table, fieldset, hr, .highlight": {
+  "h1, h2, h3, h4, h5, h6, ul, ol, dd, p, figure, table, fieldset, hr, .highlight": {
     marginTop: "1.25rem",
     marginBottom: 0
   },
@@ -36,37 +36,77 @@ export default {
   },
   "h1, h2, h3, h4, h5, h6, hgroup": {
     fontFamily: theme.sansSerif,
-    letterSpacing: ".02em"
+    fontWeight: "normal",
+    letterSpacing: ".02em",
+    lineHeight: 1.2
   },
   a: {
     color: theme.red,
+    textDecoration: "none",
     transition: "color 150ms ease-in"
   },
   "a:hover": {
     color: Color(theme.red).lighten(.2).hexString(),
     transition: "color 150ms ease-out"
   },
+  pre: {
+    backgroundColor: theme.offWhite,
+    marginTop: "1.25rem",
+    marginLeft: "-10%",
+    marginRight: "-10%",
+    paddingTop: "2em",
+    paddingRight: "10%",
+    paddingBottom: "2em",
+    paddingLeft: "10%",
+    overflow: "auto"
+  },
   "pre > code": {
-    display: "block"
+    display: "block",
+    border: "none",
+    padding: 0
   },
   code: {
-    padding: "0.2em 5px",
-    margin: "0px",
-    fontSize: "85%",
-    background: "rgba(0,0,0,0.05)",
-    borderRadius: "3px",
+    fontSize: "82%",
+    padding: "0.33em 0.333em 0.28em",
+    border: `1px solid rgba(0,0,0,0.1)`,
+    borderRadius: "1px",
     fontFamily: theme.code,
-    WebkitFontSmoothing: "subpixel-antialiased",
     wordWrap: "break-word",
     maxWidth: "100%",
-    overflowX: "scroll"
+    overflowX: "auto"
   },
   p: {
     fontSize: "95%",
     lineHeight: 1.8,
     color: theme.black
   },
-  li: {
+  ol: {
+    marginLeft: "1.25em",
+    counterReset: "li"
+  },
+  "ol > li": {
+    position: "relative",
+    listStyle: "none",
+    margin: "0.5em 0",
+    fontSize: "0.95em"
+  },
+  "ol > li:before": {
+    content: `counter(li) "."`,
+    counterIncrement: "li",
+    position: "absolute",
+    left: "-1.2em",
+    width: "1em",
+    fontFamily: theme.sansSerif,
+    fontWeight: "600",
+    color: theme.gray
+  },
+  ul: {
+    marginLeft: "0.8em",
+    padding: 0
+  },
+  "ul > li": {
+    margin: "0.5em 0",
+    padding: 0,
     fontSize: "95%",
     lineHeight: 1.8
   },
@@ -74,19 +114,22 @@ export default {
     maxWidth: "100%"
   },
   h1: {
-    fontSize: "3rem"
+    fontSize: "3.25rem"
   },
   h2: {
-    fontSize: "2rem"
+    fontSize: "2.75rem"
   },
   h3: {
-    fontSize: "1.5rem"
+    fontSize: "2.5rem"
   },
   h4: {
-    fontSize: "1.25rem"
+    fontSize: "2.25rem"
   },
   h5: {
-    fontSize: "1rem"
+    fontSize: "2rem"
+  },
+  h6: {
+    fontSize: "2rem"
   },
   svg: {
     fill: "currentColor"
@@ -130,7 +173,7 @@ export default {
     margin: "1.25rem 0px"
   },
   ".page-home .md ul ul": {
-    margin: "0px"
+    margin: "0 0 0 1.25em"
   },
   ".page-home .md ul li": {
     position: "relative",
@@ -173,13 +216,13 @@ export default {
         fontSize: "4rem"
       },
       h2: {
-        fontSize: "2.5rem"
+        fontSize: "3rem"
       },
       h3: {
-        fontSize: "1.8rem"
+        fontSize: "2.75rem"
       },
-      h4: {
-        fontSize: "1.25rem"
+      "h4, h5, h6": {
+        fontSize: "2.5rem"
       },
       ".page-home .md p:first-child": {
         fontSize: "1.3rem"

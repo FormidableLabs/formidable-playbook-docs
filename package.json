@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/FormidableLabs/formidable-playbook-lander#readme",
   "devDependencies": {
-    "builder-docs-archetype-dev": "^3.0.1",
+    "builder-docs-archetype-dev": "^4.1.1",
     "doctoc": "^1.2.0",
     "http-server": "^0.9.0",
     "rimraf": "^2.5.2"
@@ -38,14 +38,15 @@
   "dependencies": {
     "babel-preset-stage-1": "^6.5.0",
     "builder": "^2.9.1",
-    "builder-docs-archetype": "^3.0.1",
+    "builder-docs-archetype": "^4.1.1",
     "color": "^0.11.3",
-    "formidable-landers": "^4.0.2",
+    "formidable-landers": "^5.1.0",
     "formidable-playbook": "FormidableLabs/formidable-playbook",
     "history": "^2.1.0",
     "lodash": "^4.14.0",
     "markdown-it": "^7.0.0",
     "markdown-it-named-headers": "0.0.4",
+    "prismjs": "^1.5.1",
     "radium": "^0.18.1",
     "react": "15.2.1",
     "react-dom": "15.2.1",
