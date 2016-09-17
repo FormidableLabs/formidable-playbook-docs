@@ -2,13 +2,21 @@ import React from "react";
 import Radium from "radium";
 import { Link } from "react-router";
 import { indexOf } from "lodash";
+import Prism from "prismjs";
+/* eslint-disable no-unused-vars */
+// add more language support
+import jsx from "prismjs/components/prism-jsx";
+import sh from "prismjs/components/prism-bash";
+import yaml from "prismjs/components/prism-yaml";
+/* eslint-enable no-unused-vars */
+
+
 import Page from "../components/page";
 import Documentation from "../components/documentation";
 import config from "../config";
 import NotFound from "./not-found";
 import theme from "../playbook-theme";
 import NextRead from "../components/next-read";
-import DocsHeader from "../components/docs-header";
 
 class Docs extends React.Component {
   constructor(props) {
@@ -19,6 +27,10 @@ class Docs extends React.Component {
     };
   }
 
+  componentDidMount() {
+    Prism.highlightAll();
+  }
+
   componentWillMount() {
     this.getCurrentDocs(this.props.location.pathname);
   }
@@ -26,6 +38,7 @@ class Docs extends React.Component {
   componentDidUpdate(prevProps) {
     if (prevProps.location.pathname !== this.props.location.pathname) {
       window.scrollTo(0, 0);
+      Prism.highlightAll();
     }
   }
 
@@ -75,7 +88,6 @@ class Docs extends React.Component {
 
     return (
       <Page name="docs">
-        <DocsHeader />
         <main style={styles.main}>
           <Link to="/" style={styles.homeLink}>&larr; Return Home</Link>
           <Documentation markdown={this.state.docs.file} currentPath={this.props.location.pathname} />

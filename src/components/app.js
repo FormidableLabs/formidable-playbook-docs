@@ -1,6 +1,8 @@
 /* eslint-disable global-require */
 import React from "react";
 import Radium, { Style, StyleRoot } from "radium";
+import { Link } from "react-router";
+const RadiumLink = Radium(Link);
 import { Header, Footer } from "formidable-landers";
 
 import stylesheet from "../playbook-stylesheet";
@@ -14,43 +16,59 @@ class App extends React.Component {
       flexDirection: "column",
       minHeight: "100vh"
     };
+    const styleHeading = {
+      fontFamily: "sharp, 'Helvetica Neue', Helvetica, sans-serif",
+      fontSize: "3rem",
+      fontWeight: "normal",
+      lineHeight: 1.2,
+      margin: "0",
+      [`@media ${theme.breakpoints.medium}`]: {
+        fontSize: "3.5em"
+      }
+    };
+    const projectTextLogo = (
+      <RadiumLink to="/" style={styleHeading}>
+        Formidable Playbook
+      </RadiumLink>);
     const isBrowser = typeof window !== "undefined" && window.__STATIC_GENERATOR !== true;
+
     return (
       <StyleRoot
         radiumConfig={isBrowser ? { userAgent: window.navigator.userAgent } : null}
         style={styleRootStyles}
       >
         <Style rules={stylesheet} />
-        <Style
-          scopeSelector=".formidableHeader-container div"
-          rules={{
-            marginLeft: "auto",
-            mediaQueries: {
-              [`${theme.breakpoints.medium}`]: {
-                marginLeft: 0
-              }
+        <Header
+          logoProject={projectTextLogo}
+          theme="dark"
+          style={{
+            padding: "60px 0"
+          }}
+          styleBy={{
+            textIndent: "2px"
+          }}
+          styleContainer={{
+            margin: "0 auto",
+            maxWidth: theme.container,
+            padding: `0 ${theme.gutter}`
+          }}
+          styleLogos={{
+            margin: "0 auto 50px",
+            [`@media ${theme.breakpoints.medium}`]: {
+              margin: "0 auto 0 0"
             }
           }}
-        />
-        <Header
-          theme="light"
-          containerStyle={{
-            width: "100%",
-            maxWidth: `calc(${theme.container} + ${theme.gutter})`,
-            margin: `${theme.gutter} auto`,
-            padding: `${theme.gutter} 0`
-          }}
         >
-          <a href="https://github.com/FormidableLabs/formidable-playbook" style={{marginTop: "16px"}}>View Source on GitHub</a>
+          <div className="default">
+            <a href="https://github.com/FormidableLabs/formidable-playbook">GitHub</a>
+          </div>
         </Header>
         {this.props.children}
         <Footer
-          padding={`5rem ${theme.gutter} 6rem`}
           theme="dark"
-          containerStyle={{
-            width: "100%",
-            maxWidth: `calc(${theme.container} + ${theme.gutter})`,
-            margin: `${theme.gutter} auto`
+          styleContainer={{
+            margin: "0 auto",
+            maxWidth: theme.container
           }}
         />
       </StyleRoot>
