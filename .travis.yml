@@ -32,6 +32,7 @@ install:
 
 script:
   - npm test
+  - npm run scrape-links
   - NODE_ENV=production node_modules/.bin/builder run build-static
 
 # Once build on Travis is working, automatically deploy it on master only:

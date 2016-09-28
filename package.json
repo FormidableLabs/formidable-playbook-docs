@@ -4,14 +4,15 @@
   "description": "The Formidable Playbook",
   "main": "",
   "scripts": {
-    "start": "builder run dev",
+    "start": "builder run scrape-links && builder run dev",
     "dev": "webpack-dev-server --port 3000 --config node_modules/builder-docs-archetype/config/webpack/webpack.config.dev.js --history-api-fallback",
     "test": "builder run lint",
     "copy-assets": "cp -r static build/static && cp -r ./node_modules/formidable-playbook/examples build",
     "server-examples": "http-server examples -p 3000 .",
     "lint": "builder concurrent lint-react lint-config lint-test lint-examples",
     "lint-examples": "eslint --ext .js,.jsx examples --ignore-pattern **/dist/",
-    "update-project": "npm update formidable-playbook"
+    "update-project": "npm update formidable-playbook",
+    "scrape-links": "node scrape-links.js"
   },
   "repository": {
     "type": "git",
