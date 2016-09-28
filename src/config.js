@@ -1,9 +1,10 @@
 import links from "../links";
 
-export default links.map(({label, route}) => {
-  return {
-    label,
-    route,
-    file: require(`!!raw!../node_modules/formidable-playbook${route}.md`)
-  };
-});
+// Dynamically import all `docs/**/*.md` files.
+const mdRequire = require.context("!!raw!formidable-playbook", true, /docs\/.*\.md$/);
+
+export default links.map(({label, route}) => ({
+  label,
+  route,
+  file: mdRequire(`.${route}.md`)
+}));
