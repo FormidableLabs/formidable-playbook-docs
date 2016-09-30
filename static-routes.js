@@ -1,10 +1,7 @@
 "use strict";
-// The order should mirror the README TOC
-module.exports = [
-  "/",
-  "/docs/infrastructure/single",
-  "/docs/frontend/webpack-code-splitting",
-  "/docs/frontend/webpack-plugins",
-  "/docs/frontend/webpack-shared-libs",
-  "/docs/frontend/webpack-source-maps"
-];
+
+var links = require("./links");
+
+module.exports = ["/"].concat(links.map(function (link) {
+  return link.route;
+}));

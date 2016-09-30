@@ -29,6 +29,7 @@ build/Release
 
 # Built site files
 build
+links.json
 
 # Dependency directories
 node_modules

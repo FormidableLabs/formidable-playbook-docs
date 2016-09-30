@@ -6,7 +6,7 @@ export default {
   sansSerif: "'sharp', 'Helvetica Neue', Helvetica, Arial, sans-serif",
   serif: "'tiempos', 'Source Serif Pro', Georgia, serif",
   mono: "'akkurat', 'Source Serif Pro', Georgia, serif",
-  code: "'Source Code Pro', Consolas, 'Inconsolata', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Courier New', 'Courier', monospace",
+  code: "'akkurat', Consolas, 'Inconsolata', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Courier New', 'Courier', monospace",
   //
   // Colors
   //
@@ -14,7 +14,8 @@ export default {
   white: "#FFFFFF",
   black: "#242121",
   charcoal: "#4A4A4A",
-  offWhite: "#f4f4f4",
+  gray: "#a7a6a6",
+  offWhite: "#f5f2f0",
   //
   // @media queries
   //
