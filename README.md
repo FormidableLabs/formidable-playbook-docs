@@ -5,3 +5,5 @@ This is our playbook. It is the foundation that allows us to architect & design 
 This is a living document, and we intend to share our knowledge as we continue to work towards making the web a better place. Please read our [contributing guide](CONTRIBUTING.md) before submitting a pull request.
 
 [![Made with love by Formidable](https://formidable.surge.sh/assets/readme-foots.svg)](http://formidable.com/?utm_source=github&utm_medium=OSS&utm_campaign=repository)
+
+To release this lander, please follow the [archetype release instructions](https://github.com/FormidableLabs/builder-docs-archetype#lander-release) for our `npm version` workflow.
