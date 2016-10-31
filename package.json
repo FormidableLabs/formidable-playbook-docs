@@ -4,15 +4,16 @@
   "description": "The Formidable Playbook",
   "main": "",
   "scripts": {
-    "start": "builder run scrape-links && builder run dev",
-    "dev": "webpack-dev-server --port 3000 --config node_modules/builder-docs-archetype/config/webpack/webpack.config.dev.js --history-api-fallback",
-    "test": "builder run lint",
     "copy-assets": "cp -r static build/static && cp -r ./node_modules/formidable-playbook/examples build",
-    "server-examples": "http-server examples -p 3000 .",
+    "dev": "webpack-dev-server --port 3000 --config node_modules/builder-docs-archetype/config/webpack/webpack.config.dev.js --history-api-fallback",
     "lint": "builder concurrent lint-react lint-config lint-test lint-examples",
     "lint-examples": "eslint --ext .js,.jsx examples --ignore-pattern **/dist/",
-    "update-project": "npm update formidable-playbook",
-    "scrape-links": "node scrape-links.js"
+    "preversion": "builder run npm:preversion",
+    "scrape-links": "node scrape-links.js",
+    "server-examples": "http-server examples -p 3000 .",
+    "start": "builder run scrape-links && builder run dev",
+    "test": "builder run lint",
+    "update-project": "npm update formidable-playbook"
   },
   "repository": {
     "type": "git",
@@ -31,15 +32,15 @@
   },
   "homepage": "https://github.com/FormidableLabs/formidable-playbook-docs#readme",
   "devDependencies": {
-    "builder-docs-archetype-dev": "^4.1.1",
+    "builder-docs-archetype-dev": "^4.2.1",
     "doctoc": "^1.2.0",
     "http-server": "^0.9.0",
     "rimraf": "^2.5.2"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.5.0",
-    "builder": "^2.9.1",
-    "builder-docs-archetype": "^4.1.1",
+    "builder": "^3.1.0",
+    "builder-docs-archetype": "^4.2.1",
     "color": "^0.11.3",
     "formidable-landers": "^5.1.0",
     "formidable-playbook": "FormidableLabs/formidable-playbook",
