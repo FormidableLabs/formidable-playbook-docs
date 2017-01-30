@@ -36,7 +36,7 @@
     ]
   },
   "devDependencies": {
-    "builder-docs-archetype-dev": "^4.2.2",
+    "builder-docs-archetype-dev": "^6.0.0",
     "doctoc": "^1.2.0",
     "http-server": "^0.9.0",
     "rimraf": "^2.5.2"
