@@ -8,6 +8,12 @@ class Documentation extends React.Component {
     this.setMarkdownRender(this.props.currentPath);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currentPath !== this.props.currentPath) {
+      this.setMarkdownRender(nextProps.currentPath);
+    }
+  }
+
   setMarkdownRender(currentPath) {
     const md = new MarkdownIt({
       html: true,
