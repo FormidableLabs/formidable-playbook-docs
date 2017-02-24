@@ -39,7 +39,7 @@
     "builder-docs-archetype-dev": "^4.2.2",
     "doctoc": "^1.2.0",
     "http-server": "^0.9.0",
-    "rimraf": "^2.5.2"
+    "rimraf": "^2.6.1"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.5.0",
