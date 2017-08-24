@@ -4,7 +4,7 @@
   "description": "The Formidable Playbook",
   "main": "",
   "scripts": {
-    "copy-assets": "cp -r static build/static && cp -r ./node_modules/formidable-playbook/examples build",
+    "copy-assets": "cp -r static build/static && cp -r node_modules/formidable-playbook/examples build",
     "lint": "builder concurrent lint-react lint-config lint-test lint-examples",
     "lint-examples": "eslint --ext .js,.jsx examples --ignore-pattern **/dist/",
     "preversion": "builder run scrape-links && builder run npm:preversion",
@@ -36,19 +36,15 @@
     ]
   },
   "devDependencies": {
-    "builder-docs-archetype-dev": "^4.2.2",
-    "doctoc": "^1.2.0",
-    "http-server": "^0.9.0",
-    "rimraf": "^2.5.2"
-  },
-  "dependencies": {
     "babel-preset-stage-1": "^6.5.0",
     "builder": "^3.1.0",
     "builder-docs-archetype": "^4.2.2",
+    "builder-docs-archetype-dev": "^4.2.2",
     "color": "^0.11.3",
     "formidable-landers": "^5.1.0",
-    "formidable-playbook": "FormidableLabs/formidable-playbook",
+    "formidable-playbook": "0.1.1",
     "history": "^3.0.0",
+    "http-server": "^0.9.0",
     "lodash": "^4.14.0",
     "markdown-it": "^8.1.0",
     "markdown-it-named-headers": "0.0.4",
@@ -57,6 +53,7 @@
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-ga": "^2.1.1",
-    "react-router": "^3.0.0"
+    "react-router": "^3.0.0",
+    "rimraf": "^2.5.2"
   }
 }
