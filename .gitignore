@@ -10,6 +10,7 @@ phantomjsdriver\.log
 
 # Build
 build
+links.json
 
 # Install
 yarn-error.log
