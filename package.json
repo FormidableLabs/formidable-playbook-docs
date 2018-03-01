@@ -49,7 +49,7 @@
     "markdown-it": "^8.1.0",
     "markdown-it-named-headers": "0.0.4",
     "prismjs": "^1.5.1",
-    "radium": "^0.18.1",
+    "radium": "^0.22.1",
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-ga": "^2.1.1",
