@@ -75,7 +75,7 @@ export default {
     maxWidth: "100%",
     overflowX: "auto"
   },
-  p: {
+  ".error-message": {
     fontSize: "95%",
     lineHeight: 1.8,
     color: theme.black
