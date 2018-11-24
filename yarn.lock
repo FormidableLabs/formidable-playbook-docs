@@ -1694,7 +1694,7 @@ create-error-class@^3.0.1:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-create-react-class@^15.5.1, create-react-class@^15.5.2:
+create-react-class@^15.5.1:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
   dependencies:
@@ -5752,13 +5752,9 @@ react-dom@15.3.2:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.2.tgz#c46b0aa5380d7b838e7a59c4a7beff2ed315531f"
 
-react-ga@^2.1.1:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.2.0.tgz#45235de1356e4d988d9b82214d615a08489c9291"
-  dependencies:
-    create-react-class "^15.5.2"
-    object-assign "^4.0.1"
-    prop-types "^15.5.6"
+react-ga@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.5.4.tgz#1c1bd0f8414286853b9b7938ce8874386cacac38"
 
 react-router@^3.0.0:
   version "3.0.5"
